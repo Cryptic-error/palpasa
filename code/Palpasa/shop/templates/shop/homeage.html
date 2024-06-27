@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homempage</title>
+    <link rel="stylesheet" href="/static/css/home.css">
+</head>
+{% block body %}
+<body>
+    
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="navbar-brand">Palpasa</a>
+      <ul class="navbar-nav">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'service' %}">Services</a></li>
+        <li><a href="{% url 'index' %}">Products</a></li>
+        <li><a href="{% url 'index' %}">Contact us </a></li>
+        <li><a href="{% url 'index' %}">index </a></li>
+      </ul>
+    </div>
+  </nav>
+  {% endblock %}
+  
+  <header id="home" class="hero-section">
+    <div class="container">
+      <h1>Empowering Health through Innovation: Welcome to Palpasa</h1>
+      <p>Welcome to Palpasa , where innovation meets healthcare excellence.At Palpasa, we merge cutting-edge research with compassionate care to create transformative solutions that address the most pressing medical challenges of today and tomorrow.</p>
+      <p>Our team of passionate scientists, engineers, and healthcare professionals is committed to pushing the boundaries of what's possible in biomedicine. Through collaboration, creativity, and a relentless pursuit of excellence, we strive to develop groundbreaking medical devices, diagnostics, and therapies that improve patient outcomes and revolutionize the healthcare landscape.</p>
+      <a href="#services" class="btn">our services</a>
+    </div>
+    </header>
+</body>
+</html>
+ 
+  <!-- Autres sections ici -->
+

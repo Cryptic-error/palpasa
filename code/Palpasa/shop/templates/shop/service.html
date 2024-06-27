@@ -1,0 +1,313 @@
+{% extends "shop/basic.html" %}
+{% load product_filters %}
+
+
+{% block cartbg-image %}
+
+<li>
+    <!-- mini-cart 2 -->
+    <div class="mini-cart-icon mini-cart-icon-2">
+        <a href="#ltn__utilize-cart-menu" class="ltn__utilize-toggle">
+            <span class="mini-cart-icon">
+                <i class="cart"></i>
+                <sup><span id="cart">{{ cart_total }}</span></sup>
+            </span>
+            <h6><span>Your Cart</span> <span class="ltn__secondary-color">$89.25</span></h6>
+        </a>
+    </div>
+</li>
+
+{% endblock %}
+
+{% block BREADCRUMB %}
+<div class="ltn__utilize-overlay"></div>
+
+<!-- BREADCRUMB AREA START -->
+<div class="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image "  data-bs-bg="/static/img/bg/biomedical.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ltn__breadcrumb-inner">
+                    <h1 class="page-title">Product</h1>
+                    <div class="ltn__breadcrumb-list">
+                        <ul>
+                            <li><a href="index.html"><span class="ltn__secondary-color"><i class="fas fa-home"></i></span> Home</a></li>
+                            <li>Product</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block body %}
+{% for product, range, nslides in allprods %}
+<div class="ltn__product-area ltn__product-gutter pt-115 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title-area ltn__section-title-2 text-center">
+                    <h1 class="section-title">{{ product.0.category }}</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row ltn__tab-product-slider-one-active--- slick-arrow-1">
+            <!-- ltn__product-item -->
+            {% for item in product %}
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="ltn__product-item ltn__product-item-3 text-left">
+                    <div class="product-img">
+                        <a href="product-details.html"><img src="{{ item.image.url }}" alt="{{ item.product_name }}" height="200"></a>
+                        <div class="product-badge">
+                            <ul>
+                                <li class="sale-badge">New</li>
+                            </ul>
+                        </div>
+                        <div class="product-hover-action">
+                            <ul>
+                                <li>
+                                    <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal{{ item.product_id }}">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <span id="divpr{{ item.product_id }}"></span>
+                                    <a title="Add to Cart" class="add-to-cart" 
+                                       data-product="{{ item.product_id }}" 
+                                       data-name="{{ item.product_name }}" 
+                                       data-price="{{ item.price }}"
+                                       data-image-url="{{ item.image.url }}"> <!-- Add data-image-url attribute if necessary -->
+                                        <i id="pr{{ item.product_id }}" class="fas fa-shopping-cart cart"></i>
+                                    </a>
+                                </li>
+                                <!-- Add other actions like add to cart, wishlist, etc. -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-ratting">
+                            <ul>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                <!-- Add product ratings -->
+                            </ul>
+                        </div>
+                        <h2 class="product-title"><a href="product-details.html" id="namepr{{ item.product_id }}">{{ item.product_name }}</a></h2>
+                        <div class="product-price">
+                            <span>{{ item.price }}</span>
+                            <!-- Add product price -->
+                            <del>{{ item.prev_price }}</del><br>
+                            <!-- Add product description -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+
+
+
+<!-- Modals -->
+{% for product, range, nslides in allprods %}
+    {% for item in product %}
+        <div class="ltn__modal-area ltn__quick-view-modal-area">
+            <div class="modal fade" id="quick_view_modal{{ item.product_id }}" tabindex="-1">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="ltn__quick-view-modal-inner">
+                                <div class="modal-product-item">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-12">
+                                            <div class="modal-product-img" id="modal_product_img">
+                                                <img src="{{ item.image.url }}" alt="{{ item.product_name }}">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div class="modal-product-info">
+                                                <div class="product-ratting">
+                                                    <ul>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <!-- Add product ratings -->
+                                                    </ul>
+                                                </div>
+                                                <h3 id="namepr{{item.id}}"><a href="product-details.html">{{ item.product_name }}</a></h3>
+                                                <div class="product-price" id="modal_product_price">
+                                                    <span>{{ item.price }}</span>
+                                                    <del>{{ item.prev_price }}</del>
+                                                </div>
+                                                <hr>
+                                                <div class="modal-product-brief" id="modal_product_desc">
+                                                    <p>{{ item.desc }}</p>
+                                                </div>
+                                                <!-- other modal elements can be updated similarly if needed -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endfor %}
+{%endblock%}
+
+
+{% block cartmenu %}
+<div id="ltn__utilize-cart-menu" class="ltn__utilize ltn__utilize-cart-menu">
+    <div class="ltn__utilize-menu-inner ltn__scrollbar">
+        <div class="ltn__utilize-menu-head">
+            <span class="ltn__utilize-menu-title">Cart</span>
+            <button class="ltn__utilize-close">×</button>
+        </div>
+        
+        <div id="cartsubmenu" class="mini-cart-product-area ltn__scrollbar">
+            <!-- Cart items dynamically generated by JavaScript -->
+        </div>
+
+        <div class="mini-cart-footer">
+            <div class="mini-cart-sub-total">
+                <h5>Subtotal: <span id="subtotal">${{ total_price }}</span></h5>
+            </div>
+            <div class="btn-wrapper">
+                <a href="cart.html" class="theme-btn-1 btn btn-effect-1">View Cart</a>
+                <a href="cart.html" class="theme-btn-2 btn btn-effect-2">Checkout</a>
+            </div>
+            <p>Faster delivery all over the Nepal</p>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
+   
+
+{% block js %}
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader area end -->
+
+    <!-- All JS Plugins -->
+    <script src="/static/js/plugins.js"></script>
+    <!-- Main JS -->
+    <script src="/static/js/main.js"></script>
+    <script>
+    // Initialize cart from localStorage or create new if empty
+    var cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : {};
+
+    $(document).ready(function() {
+        $('.add-to-cart').click(function () {
+            var idstr = $(this).data('product');  // Product ID
+            var name = $(this).data('name');      // Product Name
+            var price = parseFloat($(this).data('price'));  // Product Price
+            var imageUrl = $(this).data('image-url');
+            console.log(imageUrl)
+
+            // Update cart with product details
+            if (cart[idstr] !== undefined) {
+                // Product already exists in cart, increment quantity
+                cart[idstr].quantity += 1;
+            } else {
+                // Add new product to cart
+                cart[idstr] = {
+                    name: name,
+                    price: price,
+                    quantity: 1,
+                    image_url:imageUrl
+                };
+            }
+
+            // Update localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Update UI
+            updateCartTotal();
+        });
+
+        // Function to update cart total and display
+        function updateCartTotal() {
+            var totalItems = 0;
+            var totalAmount = 0; // Variable to store total amount in cart
+            var cartContent = '';
+
+
+            // Calculate total items and generate cart content HTML
+           
+                for (var key in cart) {
+                    if (cart.hasOwnProperty(key)) {
+                        totalItems += cart[key].quantity;
+            
+                        // Calculate total amount for this product
+                        var subtotal = cart[key].quantity * cart[key].price;
+                        totalAmount += subtotal;
+            
+                        cartContent += `
+                            <div class="mini-cart-item clearfix">
+                                <div class="mini-cart-img">
+                                    <a href="#"><img src="${cart[key].image_url}" alt="Image"></a>
+                                    <span class="mini-cart-item-delete" data-product="${key}"><i class="icon-cancel"></i></span>
+                                </div>
+                                <div class="mini-cart-info">
+                                    <h6><a href="#">${cart[key].name}</a></h6>
+                                    <span class="mini-cart-quantity">${cart[key].quantity} x ${cart[key].price} = ${subtotal.toFixed(2)}</span>
+                                </div>
+                            </div>
+                        `;
+                    }
+                }
+
+            // Display total items in cart
+            document.getElementById('cart').innerHTML = totalItems;
+
+            // Display cart items in the cart submenu container
+            var cartsubmenu = document.getElementById('cartsubmenu');
+            cartsubmenu.innerHTML = cartContent;
+
+            var subtotalElement = document.getElementById('subtotal');
+            subtotalElement.textContent = totalAmount.toFixed(2);
+
+            // Attach event listener to delete items from cart
+            $('.mini-cart-item-delete').click(function() {
+                var productId = $(this).data('product');
+                // Remove the item from cart
+                delete cart[productId];
+                // Update localStorage
+                localStorage.setItem('cart', JSON.stringify(cart));
+                // Update UI
+                updateCartTotal();
+            });
+        }
+        
+        // Initial call to updateCartTotal to populate cart on page load
+        updateCartTotal();
+    });
+</script>
+
+      
+
+    
+{% endblock %}

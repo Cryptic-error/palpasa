@@ -1,0 +1,788 @@
+<!doctype html>
+{% load static %}
+{% load bootstrap5 %}
+<html class="no-js" lang="zxx">
+  {% block head %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fine Surgicel bio medical equipment supplier</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/icomoon@1.0.0/style.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    
+
+    <!-- Place favicon.png in the root directory -->
+    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon" />
+    <!-- Font Icons css -->
+    <link rel="stylesheet" href="/static/css/font-icons.css">
+    <!-- plugins css -->
+    <link rel="stylesheet" href="/static/css/plugins.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="/static/css/responsive.css">
+    <link rel="stylesheet" href="/static/css/webfonts/fa-regular-400.ttf">
+</head>
+
+{% comment %} {% block body %} {% endcomment %}
+<body>
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+<!-- Body main wrapper start -->
+<div class="body-wrapper">
+
+    <!-- HEADER AREA START (header-3) -->
+    <header class="ltn__header-area ltn__header-3">       
+        <!-- ltn__header-top-area start -->
+        <div class="ltn__header-top-area border-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="ltn__top-bar-menu">
+                            <ul>
+                                <li><a href="mailto:finesurgicalsales@gmail.com?Subject=Flower%20greetings%20to%20you"><i class="fa-solid fa-envelope"></i>service@finesurgical.com</a></li>
+                                <li><a href="locations.html"><i class="fa-solid fa-location-dot"></i></i>Ganesthan,Chabahil,kathmandu,Nepal</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="top-bar-right text-right text-end">
+                            <div class="ltn__top-bar-menu">
+                                <ul>
+                                                                                                                
+                                    <li>
+                                        <!-- ltn__social-media -->
+                                        <div class="ltn__social-media">
+                                            <ul>
+                                                <li><a href="https://www.facebook.com/profile.php?id=61559897785810" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                                <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                                
+                                                <li><a href="https://www.instagram.com/finesurgicalsnepal/" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                                <li><a href="#" title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="modal fade" id="checkoutModal" tabindex="-1" role="dialog" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="checkoutModalLabel">Checkout Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="checkoutForm">
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone number</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Delivery address</label>
+                            <input type="text" class="form-control" id="address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="deliveryTime">Expected delivery time</label>
+                            <input type="date" class="form-control" id="deliveryTime" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="submitCheckout">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- ltn__header-top-area end --> 
+        <!-- ltn__header-middle-area start -->
+        <div class="ltn__header-middle-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="site-logo">
+                            <a href="index.html"><img src="/static/img/finesurgicalslogo.jpg" alt="Logo"width="150" height="100"></a>
+                        </div>
+                    </div>
+                    <div class="col header-contact-serarch-column d-none d-lg-block">
+                        <div class="header-contact-search">
+                            <!-- header-feature-item -->
+                            <div class="header-feature-item">
+                                <div class="header-feature-icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="header-feature-info">
+                                    <h6>Phone</h6>
+                                    <p><a href="tel:9851317338">9851317338</a></p>
+                                </div>
+                            </div>
+                            <!-- header-search-2 -->
+                            <div class="header-search-2">
+                                <form id="#123" method="get"  action="#">
+                                    <input type="text" name="search" value="" placeholder="Search here..."/>
+                                    <button type="submit">
+                                        <span><i class="fa-solid fa-search"></i></span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <!-- header-options -->
+                        <div class="ltn__header-options">
+                            <ul>
+                            
+                                <li class="d-lg-none">
+                                    <!-- header-search-1 -->
+                                    <div class="header-search-wrap">
+                                        <div class="header-search-1">
+                                            <div class="search-icon">
+                                                <i class="icon-search  for-search-show"></i>
+                                                <i class="icon-cancel  for-search-close"></i>
+                                            </div>
+                                        </div>
+                                        <div class="header-search-1-form">
+                                            <form id="#" method="get"  action="#">
+                                                <input type="text" name="search" value="" placeholder="Search here..."/>
+                                                <button type="submit">
+                                                    <span><i class="icon-search"></i></span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </li>
+                                {% block cart %}
+                               <li>
+                                <!-- mini-cart 2 -->
+                                <div class="mini-cart-icon mini-cart-icon-2">
+                                    <a href="#ltn__utilize-cart-menu" class="ltn__utilize-toggle">
+                                        <span class="mini-cart-icon">
+                                            <i class="cart"></i>
+                                            <sup><span id ='cart'>0</span></sup>
+                                        </span>
+                                        <h6><span>Your Cart</span> <span class="ltn__secondary-color"></span></h6>
+                                    </a>
+                                </div>
+                            </li>
+                            {%endblock%} 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+         <!-- Utilize Cart Menu Start -->
+         {% block cartmenu %}
+<div id="ltn__utilize-cart-menu" class="ltn__utilize ltn__utilize-cart-menu">
+    <div class="ltn__utilize-menu-inner ltn__scrollbar">
+        <div class="ltn__utilize-menu-head">
+            <span class="ltn__utilize-menu-title">Cart</span>
+            <button class="ltn__utilize-close">×</button>
+        </div>
+        
+        <div id="cartsubmenu" class="mini-cart-product-area ltn__scrollbar">
+            <!-- Cart items dynamically generated by JavaScript -->
+        </div>
+
+        <div class="mini-cart-footer">
+            <div class="mini-cart-sub-total">
+                <h5>Subtotal: <span id="subtotal">${{ total_price }}</span></h5>
+            </div>
+            <div class="btn-wrapper">
+                <a href="cart.html" class="theme-btn-1 btn btn-effect-1">View Cart</a>
+                <a href="cart.html" class="theme-btn-2 btn btn-effect-2">Checkout</a>
+            </div>
+            <p>Faster delivery all over the Nepal</p>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
+    
+    <!-- Utilize Cart Menu End -->
+    
+    <!-- Utilize Mobile Menu Start -->
+    <div id="ltn__utilize-mobile-menu" class="ltn__utilize ltn__utilize-mobile-menu">
+        <div class="ltn__utilize-menu-inner ltn__scrollbar">
+            <div class="ltn__utilize-menu-head">
+                <div class="site-logo">
+                    <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+                </div>
+                <button class="ltn__utilize-close">×</button>
+            </div>
+            <div class="ltn__utilize-menu-search-form">
+                <form action="#">
+                    <input type="text" placeholder="Search...">
+                    <button><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="ltn__utilize-menu">
+                <ul>
+                    <li><a href="#">Home</a>
+                       
+                    </li>
+                    <li><a href="#">About</a>
+                        <ul class="sub-menu">
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="service.html">Services</a></li>
+                            <li><a href="service-details.html">Service Details</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="portfolio-2.html">Portfolio - 02</a></li>
+                            <li><a href="portfolio-details.html">Portfolio Details</a></li>
+                            <li><a href="team.html">Team</a></li>
+                            <li><a href="team-details.html">Team Details</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="locations.html">Google Map Locations</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Shop</a>
+                        <ul class="sub-menu">
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="shop-grid.html">Shop Grid</a></li>
+                            <li><a href="shop-left-sidebar.html">Shop Left sidebar</a></li>
+                            <li><a href="shop-right-sidebar.html">Shop right sidebar</a></li>
+                            <li><a href="product-details.html">Shop details </a></li>
+                            <li><a href="cart.html">Cart</a></li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="checkout.html">Checkout</a></li>
+                            <li><a href="order-tracking.html">Order Tracking</a></li>
+                            <li><a href="account.html">My Account</a></li>
+                            <li><a href="login.html">Sign in</a></li>
+                            <li><a href="register.html">Register</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">News</a>
+                        <ul class="sub-menu">
+                            <li><a href="blog.html">News</a></li>
+                            <li><a href="blog-grid.html">News Grid</a></li>
+                            <li><a href="blog-left-sidebar.html">News Left sidebar</a></li>
+                            <li><a href="blog-right-sidebar.html">News Right sidebar</a></li>
+                            <li><a href="blog-details.html">News details</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Pages</a>
+                        <ul class="sub-menu">
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="service.html">Services</a></li>
+                            <li><a href="service-details.html">Service Details</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="portfolio-2.html">Portfolio - 02</a></li>
+                            <li><a href="portfolio-details.html">Portfolio Details</a></li>
+                            <li><a href="team.html">Team</a></li>
+                            <li><a href="team-details.html">Team Details</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="history.html">History</a></li>
+                            <li><a href="add-listing.html">Add Listing</a></li>
+                            <li><a href="locations.html">Google Map Locations</a></li>
+                            <li><a href="404.html">404</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="coming-soon.html">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="ltn__utilize-buttons ltn__utilize-buttons-2">
+                <ul>
+                    <li>
+                        <a href="account.html" title="My Account">
+                            <span class="utilize-btn-icon">
+                                <i class="far fa-user"></i>
+                            </span>
+                            My Account
+                        </a>
+                    </li>
+                    <li>
+                        <a href="wishlist.html" title="Wishlist">
+                            <span class="utilize-btn-icon">
+                                <i class="far fa-heart"></i>
+                                <sup>3</sup>
+                            </span>
+                            Wishlist
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cart.html" title="Shoping Cart">
+                            <span class="utilize-btn-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                                <sup>5</sup>
+                            </span>
+                            Shoping Cart
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ltn__social-media-2">
+                <ul>
+                    <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        
+        <!-- ltn__header-middle-area end -->
+        <!-- header-bottom-area start -->
+        <div class="header-bottom-area ltn__border-top ltn__header-sticky  ltn__sticky-bg-white--- ltn__sticky-bg-secondary ltn__secondary-bg section-bg-1 menu-color-white d-none d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col header-menu-column justify-content-center">
+                        <div class="sticky-logo">
+                            <div class="site-logo">
+                                <a href="index.html"><img src="/static/img/finesurgicalslogo.jpg" alt="Logo"width="150" height="100"></a>
+                            </div>
+                        </div>
+                        <div class="header-menu header-menu-2">
+                            <nav>
+                                <div class="ltn__main-menu">
+                                    <ul>
+                                        <li class="menu-icon"><a href="{% url 'about' %}">Home</a>
+                                            
+                                        </li>
+                                        <li class="menu-icon"><a href="#">About</a>
+                                                                                </li>
+                                        <li class="menu-icon"><a href="{% url 'service' %}">Product</a>
+                                            
+                                        </li>
+                                        <li class="menu-icon"><a href="{% url 'portfolio' %}">portfolio</a>
+
+
+                                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header-bottom-area end -->
+    </header>
+    <!-- HEADER AREA END -->
+
+    <!-- MOBILE MENU START -->
+    <div class="mobile-header-menu-fullwidth mb-30 d-block d-lg-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Mobile Menu Button -->
+                    <div class="mobile-menu-toggle d-lg-none">
+                        <span>MENU</span>
+                        <a href="#ltn__utilize-mobile-menu" class="ltn__utilize-toggle">
+                            <svg viewBox="0 0 800 600">
+                                <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
+                                <path d="M300,320 L540,320" id="middle"></path>
+                                <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MOBILE MENU END -->
+
+   
+    <!-- Utilize Cart Menu End -->
+
+    <!-- Utilize Mobile Menu Start -->
+    <div id="ltn__utilize-mobile-menu" class="ltn__utilize ltn__utilize-mobile-menu">
+        <div class="ltn__utilize-menu-inner ltn__scrollbar">
+            <div class="ltn__utilize-menu-head">
+                <div class="site-logo">
+                    <a href="index.html"><img src="/static/img/logo.png" alt="Logo"></a>
+                </div>
+                <button class="ltn__utilize-close">×</button>
+            </div>
+            <div class="ltn__utilize-menu-search-form">
+                <form action="#">
+                    <input type="text" placeholder="Search...">
+                    <button><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="ltn__utilize-menu">
+                <ul>
+                    <li><a href="#">Home</a>
+                        <ul class="sub-menu">
+                            <li><a href="index.html">Home Style 01</a></li>
+                            <li><a href="index-2.html">Home Style 02</a></li>
+                            <li><a href="index-3.html">Home Style 03</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">About</a>
+                        <ul class="sub-menu">
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="service.html">Services</a></li>
+                            <li><a href="service-details.html">Service Details</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="portfolio-2.html">Portfolio - 02</a></li>
+                            <li><a href="portfolio-details.html">Portfolio Details</a></li>
+                            <li><a href="team.html">Team</a></li>
+                            <li><a href="team-details.html">Team Details</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="locations.html">Google Map Locations</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Shop</a>
+                        <ul class="sub-menu">
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="shop-grid.html">Shop Grid</a></li>
+                            <li><a href="shop-left-sidebar.html">Shop Left sidebar</a></li>
+                            <li><a href="shop-right-sidebar.html">Shop right sidebar</a></li>
+                            <li><a href="product-details.html">Shop details </a></li>
+                            <li><a href="cart.html">Cart</a></li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="checkout.html">Checkout</a></li>
+                            <li><a href="order-tracking.html">Order Tracking</a></li>
+                            <li><a href="account.html">My Account</a></li>
+                            <li><a href="login.html">Sign in</a></li>
+                            <li><a href="register.html">Register</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">News</a>
+                        <ul class="sub-menu">
+                            <li><a href="blog.html">News</a></li>
+                            <li><a href="blog-grid.html">News Grid</a></li>
+                            <li><a href="blog-left-sidebar.html">News Left sidebar</a></li>
+                            <li><a href="blog-right-sidebar.html">News Right sidebar</a></li>
+                            <li><a href="blog-details.html">News details</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Pages</a>
+                        <ul class="sub-menu">
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="service.html">Services</a></li>
+                            <li><a href="service-details.html">Service Details</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="portfolio-2.html">Portfolio - 02</a></li>
+                            <li><a href="portfolio-details.html">Portfolio Details</a></li>
+                            <li><a href="team.html">Team</a></li>
+                            <li><a href="team-details.html">Team Details</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="history.html">History</a></li>
+                            <li><a href="add-listing.html">Add Listing</a></li>
+                            <li><a href="locations.html">Google Map Locations</a></li>
+                            <li><a href="404.html">404</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="coming-soon.html">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="ltn__social-media-2">
+                <ul>
+                    <li><a href="https://www.facebook.com/profile.php?id=61559897785810" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Utilize Mobile Menu End -->
+    {% block BREADCRUMB %}
+    <div class="ltn__utilize-overlay"></div>
+    
+    <!-- BREADCRUMB AREA START -->
+    <div class="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image "  data-bs-bg="/static/img/bg/14.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ltn__breadcrumb-inner">
+                        <h1 class="page-title">About Us</h1>
+                        <div class="ltn__breadcrumb-list">
+                            <ul>
+                                <li><a href="index.html"><span class="ltn__secondary-color"><i class="fas fa-home"></i></span> Home</a></li>
+                                <li>About Us</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    {% endblock %}
+    {% block body %}
+    {% endblock %}
+
+
+      <footer>
+
+        <!-- CALL TO ACTION START (call-to-action-6) -->
+        <div class="ltn__call-to-action-area call-to-action-6 before-bg-bottom" data-bs-bg="/static/img/1.jpg--">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div class="call-to-action-inner call-to-action-inner-6 ltn__secondary-bg position-relative text-center---">
+                          <div class="coll-to-info text-color-white">
+                              <h1>Buy Bio medical product in nepal <br>"Delivering Excillence in Health care solution in Nepal"</h1>
+                          </div>
+                          <div class="btn-wrapper">
+                              <a class="btn btn-effect-3 btn-white" href="{% url 'service' %}">Explore Products <i class="icon-next"></i></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- CALL TO ACTION END -->
+  
+       <!-- FOOTER AREA START -->
+    <footer class="ltn__footer-area  ">
+        <div class="footer-top-area  section-bg-2 plr--5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 col-sm-6 col-12">
+                        <div class="footer-widget footer-about-widget">
+                            <div class="footer-logo">
+                                <div class="site-logo">
+                                    <img src="/static/img/finesurgicalbg.jpg" alt="Logo">
+                                </div>
+                            </div>
+                            <p>Fine surgicals nepal is the Bio medical company that aims to provide quality biomedical product all over the nepal quicker and in low time cost</p>
+                            <div class="footer-address">
+                                <ul>
+                                    <li>
+                                        <div class="footer-address-icon">
+                                            <i class="icon-placeholder"></i>
+                                        </div>
+                                        <div class="footer-address-info">
+                                            <p>Ganesthan, Chabahil, Kathmandu</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="footer-address-icon">
+                                            <i class="icon-call"></i>
+                                        </div>
+                                        <div class="footer-address-info">
+                                            <p><a href="tel:+977 9851317338">+977 9851317338</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="footer-address-icon">
+                                            <i class="icon-mail"></i>
+                                        </div>
+                                        <div class="footer-address-info">
+                                            <p><a href="mailto:finesurgicalsales@gmail.com">finesurgicalsales@gmail.com</a></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ltn__social-media mt-20">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/profile.php?id=61559897785810" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+                                    <li><a href="#" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-sm-6 col-12">
+                        <div class="footer-widget footer-menu-widget clearfix">
+                            <h4 class="footer-title">Company</h4>
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href={% url 'about' %}>About</a></li>
+                                    <li><a href={% url 'portfolio' %}>portfolio</a></li>
+                                    <li><a href="{% url 'service' %}">All Products</a></li>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                    <li><a href="contact.html">Contact us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-sm-6 col-12">
+                        <div class="footer-widget footer-menu-widget clearfix">
+                            <h4 class="footer-title">Services</h4>
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href="about.html">Terms & Conditions</a></li>
+                                    <li><a href={% url 'service' %}>Promotional Offers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-sm-6 col-12">
+                        <div class="footer-widget footer-menu-widget clearfix">
+                            <h4 class="footer-title">Customer Care</h4>
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                    <li><a href={% url 'contact' %}>Contact us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="ltn__copyright-area ltn__copyright-2 section-bg-7  plr--5">
+            <div class="container-fluid ltn__border-top-2">
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <div class="ltn__copyright-design clearfix">
+                            <p>All Rights Reserved @Finesurgicalsnepal <span class="current-year"></span></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 align-self-center">
+                        <div class="ltn__copyright-menu text-end">
+                            <ul>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Claim</a></li>
+                                <li><a href="#">Privacy & Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER AREA END -->
+
+</div>
+<!-- Body main wrapper end -->
+{% block js %}
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader area end -->
+
+    <!-- All JS Plugins -->
+    <script src="/static/js/plugins.js"></script>
+    <!-- Main JS -->
+    <script src="/static/js/main.js"></script>
+    <script>
+    // Initialize cart from localStorage or create new if empty
+    var cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : {};
+
+    $(document).ready(function() {
+        $('.add-to-cart').click(function () {
+            var idstr = $(this).data('product');  // Product ID
+            var name = $(this).data('name');      // Product Name
+            var price = parseFloat($(this).data('price'));  // Product Price
+            var imageUrl = $(this).data('image-url');
+            console.log(imageUrl)
+
+            // Update cart with product details
+            if (cart[idstr] !== undefined) {
+                // Product already exists in cart, increment quantity
+                cart[idstr].quantity += 1;
+            } else {
+                // Add new product to cart
+                cart[idstr] = {
+                    name: name,
+                    price: price,
+                    quantity: 1,
+                    image_url:imageUrl
+                };
+            }
+
+            // Update localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Update UI
+            updateCartTotal();
+        });
+
+        // Function to update cart total and display
+        function updateCartTotal() {
+            var totalItems = 0;
+            var totalAmount = 0; // Variable to store total amount in cart
+            var cartContent = '';
+
+
+            // Calculate total items and generate cart content HTML
+           
+                for (var key in cart) {
+                    if (cart.hasOwnProperty(key)) {
+                        totalItems += cart[key].quantity;
+            
+                        // Calculate total amount for this product
+                        var subtotal = cart[key].quantity * cart[key].price;
+                        totalAmount += subtotal;
+            
+                        cartContent += `
+                            <div class="mini-cart-item clearfix">
+                                <div class="mini-cart-img">
+                                    <a href="#"><img src="${cart[key].image_url}" alt="Image"></a>
+                                    <span class="mini-cart-item-delete" data-product="${key}"><i class="icon-cancel"></i></span>
+                                </div>
+                                <div class="mini-cart-info">
+                                    <h6><a href="#">${cart[key].name}</a></h6>
+                                    <span class="mini-cart-quantity">${cart[key].quantity} x ${cart[key].price} = ${subtotal.toFixed(2)}</span>
+                                </div>
+                            </div>
+                        `;
+                    }
+                }
+
+            // Display total items in cart
+            document.getElementById('cart').innerHTML = totalItems;
+
+            // Display cart items in the cart submenu container
+            var cartsubmenu = document.getElementById('cartsubmenu');
+            cartsubmenu.innerHTML = cartContent;
+
+            var subtotalElement = document.getElementById('subtotal');
+            subtotalElement.textContent = totalAmount.toFixed(2);
+
+            // Attach event listener to delete items from cart
+            $('.mini-cart-item-delete').click(function() {
+                var productId = $(this).data('product');
+                // Remove the item from cart
+                delete cart[productId];
+                // Update localStorage
+                localStorage.setItem('cart', JSON.stringify(cart));
+                // Update UI
+                updateCartTotal();
+            });
+        }
+        
+        // Initial call to updateCartTotal to populate cart on page load
+        updateCartTotal();
+    });
+</script>
+    
+{% endblock %}
+</body>
+</html>
